@@ -1,4 +1,5 @@
-                                                  
+                                                    
+
 ## What is JBoss wildfly
   
 •	JBoss is a powerful open source java application server developed by Redhat.
@@ -93,7 +94,7 @@ Deployments: A deployments represents anything that can be deployed
 
 Ex : An application such as EJB-JAR,WAR,EAR any kind of standard archive such as RAR or JBoss-specific deployment in to  a server.
 
-![preview](../images/deploymnt-11.png)
+![preview](../deployment-14.png)
 
 You can use drag and drop to add new content or replace existing deployments.Simply drag one or several files on to the deployment column.If there's already a deployment with the same name,the deployment will bw replaced,otherwise the deployment will be added.The deployment added by drag and drop will be enabled default.
 
@@ -103,11 +104,13 @@ At Left side when we click on the deployment we will get the options
 2. Unmanaged deployment
 3. create empty deployment
 
-![preview](../images/deploments%20war-12.png)
+![preview](../deplo-04.png)
 
 How to deploy the application or artifacts to the war file.
 
 --> copy the war file directly  & pasting it deployment folder of wildfly(Home of wildfly
+
+![preview](../deploment-02.png)
 
 -->standalone -->Deployments)
 
@@ -115,15 +118,7 @@ How to deploy the application or artifacts to the war file.
 
 --> JBoss wildfly GUI --> Upload Artifact.
 
-![preview](../images/deploy-13.png)
-
-![preview](../images/deploywar-14.png)
-
-![preview](../images/deploy-15.png)
-
-![preview](../images/deploy-16.png)
-
-![preview](../images/helloworld-page-17.png)
+![preview](../helloworld-01.png)
 
 
 ## Configuration: 
@@ -191,8 +186,6 @@ Indicating whether the application is currently running,not deployed,encountered
 
 3. Responsible for distributing configuration changes to all host controllers within the domain.
 
-4. Domain is refer to master centralized where we can manage other(host) wildfly server.
-
 ## Host Controllers:
 
 1. Manages the application server instances running on  a specific host
@@ -201,7 +194,7 @@ Indicating whether the application is currently running,not deployed,encountered
 
 3. Communicates with the domain controller to receive configuration updates & start/stop server instances.
 
-
+4. Domain is refer to master centralized where we can manage other(host) wildfly server.
 
 
 

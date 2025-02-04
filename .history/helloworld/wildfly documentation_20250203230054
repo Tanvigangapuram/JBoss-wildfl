@@ -1,0 +1,127 @@
+                                                    
+
+## What is JBoss wildfly
+  
+•	JBoss is a powerful open source java application server developed by Redhat.
+
+  Prerequisites
+
+•	To set up JBoss WildFly, there are a few prerequisites you need to meet in terms of     software, system configuration, and hardware.
+
+•	Operating system – Windows
+
+•	Java development kit
+
+•	Download wildfly – https://www.wildfly.org/downloads/
+
+•	Current version of wildfly – 35
+
+![preview](../images/wildflydownload-03.png)
+
+ 
+## Administration port number : 9990 <URL : 9990> : <Admin>
+
+## Application port number : 8080 <URL :8080> : <Application>
+
+# Folder structure of wildfly :
+
+     1.Domain
+   
+     2.Modules
+
+     3.Welcome-content
+  
+     4.Docs
+     
+     5.bin
+
+     6.Appclient
+
+![preview](../images/folder-bin-05.png
+
+ To start the JBoss wildfly go to the homefolder of wildfly then click on bin folder.
+
+   Filename --> standalone.(windows batchfile)
+
+![preview](../start-wildfly-08.png)   
+  
+   once you start the windows batchfile it will show the console.
+
+![preview](../console-09.png)   
+
+## How to create Management console user creation :
+
+<Homefolder of wildfly> -->bin
+
+Filename : add-user (windows batch file)
+
+![preview](../user-10.png)
+
+Once you run the add-user windows batchfile asking what type of user do you wish to add.
+
+a) Management user (mgmt-users.properties)
+
+b) Application user (application-users.properties)
+
+If we click on the username it will allow us to ask to enter username 
+If we click on the password it will ask us to Re-tpe password
+
+## How to access Wildfly
+
+Admin/Management console : <URL : 9990>
+
+Username & Password
+
+One of the folder structure is standalone where will be having the configuration,deployments and logs.
+
+standalone --> configuration,deployments and logs
+
+![preview](../standalone-11.png)
+
+Configuration: Where we will be having configurations of applications & users specifics.
+
+ Ex : Mgmt-users.properties & Mgmt-groups.properties
+
+![preview](../standaloneexam-12.png) 
+
+Logs: server where will see the logs of wildfly
+
+## standalone -->log -->logs of wildfly
+
+![preview](../lod-13.png)
+
+Deployments: A deployments represents anything that can be deployed 
+
+Ex : An application such as EJB-JAR,WAR,EAR any kind of standard archive such as RAR or JBoss-specific deployment in to  a server.
+
+![preview](../deployment-14.png)
+
+You can use drag and drop to add new content or replace existing deployments.Simply drag one or several files on to the deployment column.If there's already a deployment with the same name,the deployment will bw replaced,otherwise the deployment will be added.The deployment added by drag and drop will be enabled default.
+
+At Left side when we click on the deployment we will get the options 
+
+1. Upload deploment
+2. Unmanaged deployment
+3. create empty deployment
+
+![preview](../deplo-04.png)
+
+How to deploy the application or artifacts to the war file.
+
+--> copy the war file directly  & pasting it deployment folder of wildfly(Home of wildfly
+
+![preview](../deploment-02.png)
+
+-->standalone -->Deployments)
+
+--> cp (artifact source path) (destination of deployments of wildfly)
+
+--> JBoss wildfly GUI --> Upload Artifact.
+
+![preview](../helloworld-01.png)
+
+
+
+
+
+

@@ -1,4 +1,5 @@
-                                                  
+                                                    
+
 ## What is JBoss wildfly
   
 •	JBoss is a powerful open source java application server developed by Redhat.
@@ -46,7 +47,7 @@
   
    once you start the windows batchfile it will show the console.
 
-![preview](../cons
+![preview](../console-09.png)   
 
 ## How to create Management console user creation
 
@@ -81,19 +82,19 @@ Configuration: Where we will be having configurations of applications & users sp
 
  Ex : Mgmt-users.properties & Mgmt-groups.properties
 
-![preview](../images/log-10.png)
+![preview](../standaloneexam-12.png) 
 
 Logs: server where will see the logs of wildfly
 
 ## standalone -->log -->logs of wildfly
 
-![previe](../images/logs-11.png)
+![preview](../lod-13.png)
 
 Deployments: A deployments represents anything that can be deployed 
 
 Ex : An application such as EJB-JAR,WAR,EAR any kind of standard archive such as RAR or JBoss-specific deployment in to  a server.
 
-![preview](../images/deploymnt-11.png)
+![preview](../deployment-14.png)
 
 You can use drag and drop to add new content or replace existing deployments.Simply drag one or several files on to the deployment column.If there's already a deployment with the same name,the deployment will bw replaced,otherwise the deployment will be added.The deployment added by drag and drop will be enabled default.
 
@@ -103,11 +104,13 @@ At Left side when we click on the deployment we will get the options
 2. Unmanaged deployment
 3. create empty deployment
 
-![preview](../images/deploments%20war-12.png)
+![preview](../deplo-04.png)
 
 How to deploy the application or artifacts to the war file.
 
 --> copy the war file directly  & pasting it deployment folder of wildfly(Home of wildfly
+
+![preview](../deploment-02.png)
 
 -->standalone -->Deployments)
 
@@ -115,93 +118,77 @@ How to deploy the application or artifacts to the war file.
 
 --> JBoss wildfly GUI --> Upload Artifact.
 
-![preview](../images/deploy-13.png)
-
-![preview](../images/deploywar-14.png)
-
-![preview](../images/deploy-15.png)
-
-![preview](../images/deploy-16.png)
-
-![preview](../images/helloworld-page-17.png)
+![preview](../helloworld-01.png)
 
 
 ## Configuration: 
          
   Things to keep in mind before changing configurational changes
 
-    where to change
-    Backup
-    How to change
-    Try or Experiment in Local environments
+    1.where to change
+2. Backup
+3. How to change
+4. Try or Experiment in Local environments
 
-## Snapshot/Backup:
+Snapshot/Backup:
 
-  For wildfly-configuration snapshot
+                 For wildfly-configuration snapshot
          
-    -->Homefolder of wildfly-->standalone-->configuration-->standalone-xml-history
+-->Homefolder of wildfly-->standalone-->configuration-->standalone-xml-history
 
-## Filename: Standalone.v1
+Filename: Standalone.v1
 
 ex: Port number change
 
-## Standalone-portchange.v2
+Standalone-portchange.v2
 
-  Need to rename the original/existed file & then replace the customized as per requirement/change
+Need to rename the original/existed file & then replace the customized as per requirement/change
 
-   ## Different status types of artifacts deployed in wildfly
+Different status types of artifacts deployed in wildfly:
 
-   In wildfly, deployed artifacts can have various states including
+ In wildfly, deployed artifacts can have various states including
 
-### Deployed- The application is successfully running on the wildfly server and accessible to users
+Deployed- The application is successfully running on the wildfly server and accessible to users
 
-### undeployed- The application has been removed from server & is not currently running
+undeployed- The application has been removed from server & is not currently running
 
-### Failed- The deployment process encountered an error and the application is not running
+Failed- The deployment process encountered an error and the application is not running
 
-### Disabled- The application is intentionally stopped by the administrator & cannot be accessed until enabled.
+Disabled- The application is intentionally stopped by the administrator & cannot be accessed until enabled.
 
-### Suspended- The application is temporarily paused & can be resumed later
+Suspended- The application is temporarily paused & can be resumed later
 
-### Redeploing- The application is currently being updated with new code & is not fully available while the redeployment process is ongoing.
+Redeploing- The application is currently being updated with new code & is not fully available while the redeployment process is ongoing.
 
 Indicating whether the application is currently running,not deployed,encountered an error during deployment,intentionally deactivated,temporarily paused / is in the process of being redeploy with updates.
 
-## Accessing deployment status:
+Accessing deployment status:
 
-### Wildfly management console:
+Wildfly management console:
 
-    You can view the status of deployed artifacts through the wildfly admin console,which provides a list of deployments with their current state.
+         You can view the status of deployed artifacts through the wildfly admin console,which provides a list of deployments with their current state.
 
-### CLI(Command line interface):
+CLI(Command line interface):
 
-    Using the wildfly command-line interface, you can query the state of deploments with management commands.
-
-## What is Domain Controller
+                            Using the wildfly command-line interface, you can query the state of deploments with management commands.
+What is Domain Controller
 
      In JBoss Wildfly a "domain Controller" is the central management point for a group of servers within  a domain,responsible for maintaining the overall configuration and policy,while a "host controller" separate process running on each server within the domain,communicating with the domain controller to manage the individual server instances on thet host machine.
 
-     Essentially,the domain controller dictates the overall configuration and the host controller execute those configuration their respective servers.
+Essentially,the domain controller dictates the overall configuration and the host controller execute those configuration their respective servers.
 
-## Key points about domain and host controllers:
+Key points about domain and host controllers:
 
 1. Acts as the central management point for the entire domain
+2.Stores the domain-wide configuration in a file called "domain.xml" (Homefolder-->Domain-->configuration-->domail.xml)
+3.Responsible for distributing configuration changes to all host controllers within the domain.
 
-2. Stores the domain-wide configuration in a file called "domain.xml" (Homefolder-->Domain-->configuration-->domail.xml)
-
-3. Responsible for distributing configuration changes to all host controllers within the domain.
-
-4. Domain is refer to master centralized where we can manage other(host) wildfly server.
-
-## Host Controllers:
+Host Controllers:
 
 1. Manages the application server instances running on  a specific host
-
 2. Reads its configuration from  a "host.xml" file specific to that host. (Homefolder-->Domain-->configuration-->host.xml)
-
 3. Communicates with the domain controller to receive configuration updates & start/stop server instances.
-
-
+4. Domain is refer to master centralized where we can manage other(host) wildfly server.
 
 
 
